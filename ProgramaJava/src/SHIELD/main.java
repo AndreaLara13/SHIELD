@@ -19,7 +19,7 @@ public class main
                 String interventores; 
                 String nombre; 
                 String zona; 
-                String num_bajas; 
+                String bajas; 
                 String heridos; 
                 String codigo; 
                 String nombre_grupo; 
@@ -27,52 +27,36 @@ public class main
                 String rfc; 
                 String ceo; 
                 String tipo_armamento;
+                String fk_ataquemutante;
+                String fk_ataqueeconom;
+                String fk_ataqueextr;
+                String fk_ataqueinvasion;
                 		
-		// = conexion.getQuery("select * from shield");
-                result = conexion.getQuery("select * from grupo_superheroes");
+		
+                result = conexion.getQuery("select * from ataque");
+                
+                
 		try
 		{
 			while(result.next())
 			{
-                            nombre_grupo = result.getString("nombre_grupo");
-                            integrantes = result.getString("integrantes");
-                            System.out.println(nombre_grupo + ": " + integrantes);
-                            
-                            for( String integrante : integrantes.split(",") ) {
-                                System.out.println(integrante);
-                            }
-                            /*
-				id = result.getString("Id");
-				no_serie = result.getString("no_serie");
-				tipo = result.getString("tipo");
-				interventores = result.getString("interventores");
-                                nombre = result.getString("nombre");
-                                zona = result.getString("zona");
-                                num_bajas = result.getString("num_bajas");
-                                heridos = result.getString("heridos");
-                                codigo = result.getString("codigo");
-                                nombre_grupo = result.getString("nombre_grupo");
-                                integrante = result.getString("integrante");
-                                rfc = result.getString("rfc");
-                                ceo = result.getString("ceo");
-                                tipo_armamento = result.getString("tipo_armamento");
-                                
-				
-				System.out.println (id);
-				System.out.println(no_serie);
-                                System.out.println(tipo);
-                                System.out.println(interventores);
-                                System.out.println(nombre);
-                                System.out.println(zona);
-                                System.out.println(num_bajas);
-                                System.out.println(heridos);
-                                System.out.println(codigo);
-                                System.out.println(nombre_grupo);
-                                System.out.println(integrante);
-                                System.out.println(rfc);
-                                System.out.println(ceo);
-                                System.out.println(tipo_armamento);
-				*/
+                            nombre = result.getString("nombre");
+                            zona = result.getString("zona");
+                            bajas = result.getString("bajas");
+                            heridos = result.getString("heridos");
+                            fk_ataquemutante = result.getString("fk_ataquemutante");
+                            fk_ataqueeconom = result.getString("fk_ataqueeconom");
+                            fk_ataqueextr = result.getString("fk_ataqueextr");
+                            fk_ataqueinvasion = result.getString("fk_ataqueinvasion");
+                            System.out.println(nombre + ": ");
+                            System.out.println("zona: " + zona + ": ");
+                            System.out.println("bajas: " + bajas + ": ");
+                            System.out.println("heridos: " + heridos + ": " );
+                            System.out.println("id de ataque mutante: " + fk_ataquemutante + ": " );
+                            System.out.println("id de ataque economico: " + fk_ataqueeconom + ": " );
+                            System.out.println("id de ataque extraterrestre: " + fk_ataqueextr + ": " );
+                            System.out.println("id de ataque invasion: " + fk_ataqueinvasion + ": " );
+                           
 			}
 		}
 		catch (SQLException e)
