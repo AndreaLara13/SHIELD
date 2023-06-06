@@ -49,13 +49,13 @@ public class main
                             fk_ataqueextr = result.getString("fk_ataqueextr");
                             fk_ataqueinvasion = result.getString("fk_ataqueinvasion");
                             System.out.println(nombre + ": ");
-                            System.out.println("zona: " + zona + ": ");
-                            System.out.println("bajas: " + bajas + ": ");
-                            System.out.println("heridos: " + heridos + ": " );
-                            System.out.println("id de ataque mutante: " + fk_ataquemutante + ": " );
-                            System.out.println("id de ataque economico: " + fk_ataqueeconom + ": " );
-                            System.out.println("id de ataque extraterrestre: " + fk_ataqueextr + ": " );
-                            System.out.println("id de ataque invasion: " + fk_ataqueinvasion + ": " );
+                            System.out.println("zona: " + zona );
+                            System.out.println("bajas: " + bajas);
+                            System.out.println("heridos: " + heridos);
+                            System.out.println("id de ataque mutante: " + fk_ataquemutante);
+                            System.out.println("id de ataque economico: " + fk_ataqueeconom);
+                            System.out.println("id de ataque extraterrestre: " + fk_ataqueextr);
+                            System.out.println("id de ataque invasion: " + fk_ataqueinvasion);
                            
 			}
 		}
